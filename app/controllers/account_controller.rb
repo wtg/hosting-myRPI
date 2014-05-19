@@ -1,27 +1,30 @@
 class AccountController < ApplicationController
 
   def index
-
   end
 
   def new
-    # CAS callback results
-    cas_hash = request.env['omniauth.auth']
-
-    # cPanel API user, key, and url
-    key = ENV["CPANEL_KEY"]
-    url = ENV["CPANEL_URL"]
-    user = ENV["CPANEL_USER"]
-
-    # Build API request path
-    #uri = URI.parse(api_uri_createacct)
-    #uri.query = [uri.query, "username=#{new_user}"].compact.join('&')
-    #uri.query = [uri.query, "password=#{new_password}"].compact.join('&')
-
+    @cas_hash = request.env['omniauth.auth']
   end
 
   def create
+    # CAS callback results
+    @cas_hash = request.env['omniauth.auth']
+    domain = @cas_hash['uid']
 
+    server = whm_api
+
+    result = server.account.create(
+      username: @cas_hash['uid'],
+      domain: "#{domain}.sgsbw.union.rpi.edu",
+      password: 'password'
+    )
+  end
+
+  def signup
+  end
+
+  def login
   end
 
 end

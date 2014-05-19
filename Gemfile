@@ -23,3 +23,6 @@ gem 'better_errors'
 
 # Set private environment varibles for cPanel API
 gem 'figaro'
+
+# cPanel API 
+gem 'lumberg'

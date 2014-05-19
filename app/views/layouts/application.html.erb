@@ -8,7 +8,31 @@
 </head>
 <body>
 
-<%= yield %>
+<div class="page">
+
+  <div class="page-top">
+    <div class="page-top-padding">
+      <a href="/"><%= image_tag "logo.jpg" %></a>
+      <div class="login-signup">
+        <div class="login-signup-padding">
+          <%= link_to "Log into your account", "/login" %>
+          <%= image_tag "blsp.gif", height: 1, width: 30 %>
+          <%= link_to "Sign Up", "/signup" %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="content-padding">
+      <%= yield %>
+    </div>
+  </div>
+
+  <div class="page-bottom">
+  </div>
+
+</div>
 
 </body>
 </html>

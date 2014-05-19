@@ -1,1 +1,37 @@
-<b> User : </b> <%= @cas_hash["uid"] %> 
+<div class="login-form">
+  <%= form_for :account, url: account_path(@account) do |f| %>
+
+    <p> 
+      <b><%= f.label :username, "Username " %></b>
+      <%= f.text_field :username, value: @cas_hash['uid'], readonly: true %>
+    </p>
+
+    <p>
+      <b><%= f.label :firstname, "First Name " %></b>
+      <%= f.text_field :fname %>
+    </p>
+
+    <p> 
+      <b><%= f.label :lastname, "Last Name " %></b>
+      <%= f.text_field :lname %>
+    </p>
+
+    <p>
+      <b><%= f.label :sub, "Requested Sub-Domain " %>
+      <%= f.text_field :sub %>
+    </p>
+
+    <p>
+      <b><%= f.label :pass, "Password " %>
+      <%= f.password_field :pass %>
+    </p>
+
+    <p>
+      <b><%= f.label :pass_confirm, "Confirm Password " %>
+      <%= f.password_field :pass_confirm %>
+    </p>
+
+    <%= f.submit %>
+
+  <% end %>
+</div>

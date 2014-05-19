@@ -1,3 +1,178 @@
 // Place all the styles related to the account controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background: url(image_path('page_bg.gif')) repeat;
+  font-family: Arial, sans-serif;
+  line-height: 1.75em;
+}
+
+.page {
+  width: 980px;
+  margin: 20px auto;
+  background: #FFF url(image_path('wrap_bg.jpg')) top center repeat-y;
+}
+
+.page-top {
+  width: 100%;
+  height: 79px;
+  background: url(image_path('page_top.jpg')) top center no-repeat;
+}
+
+.page-top-padding {
+  padding: 25px 30px;
+}
+
+.page-bottom {
+  width: 100%;
+  height: 114px;
+  background: url(image_path('page_bottom.jpg')) top center no-repeat;
+}
+
+.login-signup {
+  float: right;
+  text-align: right;
+}
+
+.login-signup-padding {
+  padding: 7px 12px;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.content {
+  height: 900px;
+}
+
+.content-padding {
+  display: block;
+  padding: 20px 30px;
+
+}
+
+.login-form {
+}
+
+h1 {
+  color: #336699;
+  font-size: 3em;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: normal;
+  margin: 26px;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 1.5em;
+  line-height: normal;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.has_subtitle {
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #666;
+  margin-left: 26px;
+}
+
+.sun {
+  background: url(image_path('sun.jpg')) top center no-repeat;
+  height: 105px;
+  width: 537px;
+  float: right;
+}
+
+.signup-div {
+  height: 545px;
+  width: 535px;
+  border-left: 1px #99ff99 solid;
+  border-right: 1px #99ff99 solid;
+  float: right;
+  background: #99ff99 url(image_path('signup_bg.jpg')) repeat;
+
+  h1 {
+    font-size: 1.0em;
+    color: #AF7A41;
+    text-align: center;
+    text-shadow: 0px 1px 0px #FFFB02;
+    font-weight: bold;
+    letter-spacing: 0.4em;
+  }
+}
+
+.signup-div-bottom { 
+  text-align: center;
+  margin-top: 30px;
+  clear: both;
+  border-top: dotted 1px #666;
+  padding-top: 12px;
+  font-size: .5em;
+  width: 493px;
+  height: 47px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.seal_button {
+  height: 149px;
+  width: 460px;
+  display: block;
+  background: url(image_path('seal_button.png')) center center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.seal_title {
+  padding: 40px 30px 40px 160px;
+  color: #eee;
+  margin: 26px;
+}
+
+.seal_subtitle {
+  padding: 40px 30px 40px 160px;
+  color: #ccc;
+  margin: 26px;
+}
+
+.join_detail {
+  margin-bottom: 25px;
+  display: block;
+
+  img {
+    height: 70px;
+    width: 106px;
+    padding-right: 3px;
+    float: left;
+  }
+
+  margin-right: 560px;
+}
+
+.detail_title {
+  color: #336699;
+  margin-bottom: 2px;
+  font-size: 0.8em;
+  font-weight: normal;
+  width: 493px;
+  height: 47px;
+}
+
+.detail {
+  line-height: 1.5em;
+  font-size: 12px;
+  margin: 0px 0px 18px 112px;
+}
+
+.unstyled-link {
+  text-decoration: none;
+  color: #003366;
+}
