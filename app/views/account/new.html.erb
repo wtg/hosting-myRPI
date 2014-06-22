@@ -1,37 +1,37 @@
-<div class="login-form">
-  <%= form_for :account, url: account_path(@account) do |f| %>
+<h1 class="has_subtitle"> Sign Up Now For a Free MyRPI-Space Account</h1>
+<h2 class="subtitle">Joining is quick and easy.&nbsp;&nbsp;Oh, and did we mention it's free?<h2>
 
-    <p> 
-      <b><%= f.label :username, "Username " %></b>
-      <%= f.text_field :username, value: @cas_hash['uid'], readonly: true %>
-    </p>
+<br><br>
 
-    <p>
-      <b><%= f.label :firstname, "First Name " %></b>
-      <%= f.text_field :fname %>
-    </p>
+<div class="sun">
+</div>
 
-    <p> 
-      <b><%= f.label :lastname, "Last Name " %></b>
-      <%= f.text_field :lname %>
-    </p>
+<div class="signup-div">
+  <%= render partial: "form_new" %>
+</div>
 
-    <p>
-      <b><%= f.label :sub, "Requested Sub-Domain " %>
-      <%= f.text_field :sub %>
-    </p>
+<br><br><br>
 
-    <p>
-      <b><%= f.label :pass, "Password " %>
-      <%= f.password_field :pass %>
-    </p>
+<div class="join_detail">
+  <%= image_tag "dove_icon.jpg" %>
+  <h3 class="detail_title">Freedom.</h3>
+  <p class="detail">Try out new web technologies and expand your knowledge and talents on the Web. No more rigid quotas or jumping through hoops.</p>
+</div>
 
-    <p>
-      <b><%= f.label :pass_confirm, "Confirm Password " %>
-      <%= f.password_field :pass_confirm %>
-    </p>
+<div class="join_detail">
+  <%= image_tag "fist_icon.jpg" %>
+  <h3 class="detail_title">Power.</h3>
+  <p class="detail">Ruby on Rails, PHP, Perl, and much more (view list). Use Fantastico to set up Drupal, Wordpress, and other packages in a couple mouse clicks.</p>
+</div>
 
-    <%= f.submit %>
+<div class="join_detail">
+  <%= image_tag "keys_icon.jpg" %>
+  <h3 class="detail_title">Access.</h3>
+  <p class="detail">Shell access via SSH, FTP, MySQL, PostgreSQL, and a full CGI-bin. Your own custom URL with a sub-domain at myrpi.org. Be creative.</p>
+</div>
 
-  <% end %>
+<div class="join_detail">
+  <%= image_tag "numbers_icon.jpg" %>
+  <h3 class="detail_title">Numbers.</h3>
+  <p class="detail">100 MB of disk space. 2 GB of bandwidth. 3 sub-domains, 3 FTP accounts, and 3 databases. If you need more than that, just request it.</p>
 </div>

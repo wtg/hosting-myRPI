@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: "account#index"
+  root to: "account#signup"
 
   get "/signup" => "account#signup"
   get "/login" => "account#login"

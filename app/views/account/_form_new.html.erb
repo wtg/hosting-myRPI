@@ -1,0 +1,40 @@
+<h1 style="text-align: center"> - Create Your Account - </h1>
+<br>
+
+<div class="login-form">
+  <%= form_for :account, url: account_path(@account) do |f| %>
+
+    <p> 
+      <%= f.label :username, "Username " %>
+      <%= f.text_field :username, value: @cas_hash['uid'], readonly: true, :class => "readonly" %>
+    </p>
+
+    <p>
+      <%= f.label :firstname, "First Name " %>
+      <%= f.text_field :fname %>
+    </p>
+
+    <p> 
+      <%= f.label :lastname, "Last Name " %>
+      <%= f.text_field :lname %>
+    </p>
+
+    <p>
+      <%= f.label :sub, "Requested Sub-Domain " %>
+      <%= f.text_field :sub %>
+    </p>
+
+    <p>
+      <%= f.label :pass, "Password " %>
+      <%= f.password_field :pass %>
+    </p>
+
+    <p>
+      <%= f.label :pass_confirm, "Confirm Password " %>
+      <%= f.password_field :pass_confirm %>
+    </p>
+
+    <%= f.submit %>
+
+  <% end %>
+</div>
